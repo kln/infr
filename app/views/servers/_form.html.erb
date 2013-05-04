@@ -12,47 +12,38 @@
   <% end %>
 
   <fieldset>
-       <div class="form-horizontal">
-      
-        <div class="control-group">
-          <%= f.label "lblHost", "Hostname:", :class => "control-label" %>
-          <div class="controls">
-            <%= f.text_field :hostname %>
-          </div>
+    <div class="form-horizontal">
+      <div class="control-group">
+        <%= f.label "lblHost", "Hostname:", :class => "control-label" %>
+        <div class="controls">
+          <%= f.text_field :hostname %>
         </div>
+      </div>
 
-        <div class="control-group">
-          <%= f.label "lblIP", "IP:", :class => "control-label" %>
-          <div class="controls">
-            <%= f.text_field :ip %>
+      <div class="control-group">
+        <%= f.label "lblIP", "IP:", :class => "control-label" %>
+        <div class="controls">
+          <%= f.text_field :ip %>
+        </div>
+      </div>
+    
+      <div class="control-group">
+        <%= f.label "lvlOS", "Operational System:", :class => "control-label" %>
+        <div class="controls">
+          <%= f.text_field :os%>
+        </div>
+      </div>
+    
+      <div class="control-group">
+        <%= f.label "lbldesc", "Description:", :class => "control-label" %>
+        <div class="controls"><%= f.text_area :description, :rows => "4" %></div>
+      </div>
+    
+      <div class="control-group">
+          <div class="controls">          
+              <%= submit_tag "Save", :class => "btn" %>
+              <button class="btn" type="button" onclick="history.go(-1)">Cancel</button>
           </div>
-        </div>
-      
-        <div class="control-group">
-          <%= f.label "lvlOS", "Operational System:", :class => "control-label" %>
-          <div class="controls">
-            <%= f.text_field :os%>
-          </div>
-        </div>
-      
-        <div class="control-group">
-          <%= f.label "lbldesc", "Description:", :class => "control-label" %>
-          <div class="controls"><%= f.text_area :description, :rows => "4" %></div>
-        </div>
-      
-        <div class="actions">
-          <table>
-            <tr>
-              <td>
-                <%= submit_tag "Save", :class => "btn" %>
-              </td>
-              <td>
-                <button class="btn" type="button" onclick="history.go(-1)">Cancel</button>
-              </td>
-            </tr>
-          </table>
-        </div>
-        
       </div>
   </fieldset>
 <% end %>

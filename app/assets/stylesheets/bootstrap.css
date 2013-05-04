@@ -226,6 +226,7 @@ a:hover {
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
+  color: #000;
 }
 
 .span12 {
@@ -1893,7 +1894,9 @@ table {
   width: 100%;
   margin-bottom: 20px;
 }
-
+.td {
+  font-weight: bold;
+}
 .table th,
 .table td {
   padding: 8px;
@@ -1909,6 +1912,7 @@ table {
 
 .table thead th {
   vertical-align: bottom;
+  font-weight: bold
 }
 
 .table caption + thead tr:first-child th,

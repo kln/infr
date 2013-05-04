@@ -8,10 +8,13 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
 				<ul class="nav">
+						<li>
+							<%= image_tag("logo.png", :size => "55x55", :class => "brand") %>
+						</li>
 					<% if user_signed_in? %>
 						<li><a href="<%= servers_path %>" >Servers</a></li>
 						<li><a href="<%= computers_path %>" >Computers</a></li>
@@ -23,9 +26,9 @@
 					<% end %>
 				</ul>
 			</div>
-		<div class="container" style="color: #000000">
-			<%= yield %>
 		</div>
+		<div class="container">
+			<%= yield %>
 		</div>
 	</div>
 </body>
