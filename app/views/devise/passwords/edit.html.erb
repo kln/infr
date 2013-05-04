@@ -1,0 +1,31 @@
+<h2>Alterar Senha</h2>
+
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :reset_password_token %>
+
+<table>
+	<tr>
+	  	<td>
+	  		<%= f.label :password, "Password" %>
+	  	</td>
+	  	<td>
+	  		<%= f.password_field :password %></div>
+	  	</td>
+	</tr>
+	<tr>
+	  	<td>
+	  		<%= f.label :password_confirmation, "Confirm Password" %>
+	 	</td>
+	  	<td>
+	  		<%= f.password_field :password_confirmation %>
+	  	</td>
+	</tr>
+	<tr>
+	  	<td>
+			<%= f.submit "Change my password" %>
+	  	</td>
+	</tr>
+<% end %>
+</table>
+<%= render "devise/shared/links" %>

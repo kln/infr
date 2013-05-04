@@ -1,0 +1,51 @@
+<%= form_for(@equip) do |f| %>
+  <% if @equip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@equip.errors.count, "error") %> prohibited this computer from being saved:</h2>
+      <ul>
+        <% @equip.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+  <fieldset>
+      <div class="form-horizontal">
+        <div class="control-group">
+          <%= f.label "lblType", "Type:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :type_equip, :maxlength => "30" %>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label "lblModel", "Model:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :model_equip, :maxlength => "30" %>
+          </div>
+        </div>
+      
+        <div class="control-group">
+          <%= f.label "lblLoc", "Location:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :location_equip, :maxlength => "30" %>  
+          </div>
+        </div>
+      
+        <div class="actions">
+          <table>
+            <tr>
+              <td>
+                <%= submit_tag "Save", :class => "btn" %>
+              </td>
+              <td>
+                <button class="btn" type="button" onclick="history.go(-1)">Cancel</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+  </fieldset>
+<% end %>

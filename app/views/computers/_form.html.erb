@@ -1,0 +1,70 @@
+<%= form_for(@computer) do |f| %>
+  <% if @computer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@computer.errors.count, "error") %> prohibited this computer from being saved:</h2>
+      <ul>
+        <% @computer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <fieldset>
+    <div class="form-horizontal">
+        <div class="control-group">
+          <%= f.label "lblHost", "Hostname:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :hostname %>
+          </div>
+        </div>
+
+        <div class="control-group">
+           <%= f.label "lblIP", "IP:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :ip %>
+          </div>
+        </div>
+      
+        <div class="control-group">
+          <%= f.label "lblOS", "Operational System:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :os %>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <%= f.label "lblProc", "Processor:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :processor%>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <%= f.label "lblRam", "Memory RAM:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :memory_ram%>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <%= f.label "lblHd", "Hard Disk:", :class => "control-label" %>
+          <div class="controls">
+            <%= f.text_field :hard_disk%>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <%= f.label "lblObs", "Obsevations:", :class => "control-label" %>
+          <div class="controls"><%= f.text_area :obs, :rows => "4" %></div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">          
+                <%= submit_tag "Save", :class => "btn" %>
+                <button class="btn" type="button" onclick="history.go(-1)">Cancel</button>
+            </div>
+        </div>
+    </div>
+  </fieldset>
+<% end %>

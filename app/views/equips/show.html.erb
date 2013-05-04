@@ -1,0 +1,22 @@
+<% if notice != nil %>
+	<div class="alert alert-success">
+  		<button type="button" class="close" data-dismiss="alert">×</button>
+  		<p id="notice"><%= notice %></p>
+	</div>
+<% end %>
+<br /><legend>Equips</legend>
+<table class="table table-striped">
+	<tr>
+		<td>Type of Equips:</td>
+		<td><%= @equip.type_equip %></td>
+	</tr>
+	<tr>
+		<td>Model:</td>
+		<td><%= @equip.model_equip %></td>
+	</tr>
+	<tr>
+		<td>Description:</td>
+		<td><%= @equip.location_equip %></td>
+	</tr>
+</table>
+<button class="btn" ><%= link_to image_tag("back.png", :alt => "Back"), equips_path %></button>

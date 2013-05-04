@@ -1,0 +1,38 @@
+<div class="hero-unit">
+	<div class="form-horizontal">
+		<legend>Create an Account</legend>
+		<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+		  <%= devise_error_messages! %>
+
+		<div class="control-group">
+			<%= f.label :username, "Name:", :class => "control-label" %>
+		    <div class="controls">
+		    	<%= f.text_field :username , :placeholder => "Name"%>
+		    </div>
+		</div>
+		<div class="control-group">
+		    <%= f.label :email, "Email:", :class => "control-label" %>
+			<div class="controls">
+		   		<%= f.text_field :email , :placeholder => "Email" %>
+			</div>
+		</div>
+		 <div class="control-group">
+			<%= f.label :password, "Password:", :class => "control-label" %>
+		    <div class="controls">
+		        <%= f.password_field :password, :placeholder => "Password" %>
+			</div>
+		</div>
+		 <div class="control-group">
+			<%= f.label :password_confirmation, "Confirm Password",  :class => "control-label" %>
+		    <div class="controls">
+		        <%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %>
+			</div>
+		</div>
+		<div class="control-group">
+			<div class="controls">          
+			    <%= submit_tag "Create", :class => "btn btn-primary" %>
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>
