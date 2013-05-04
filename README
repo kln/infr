@@ -1,0 +1,11 @@
+Recommended:
+	Rails 3.2.13
+	Ruby 2.0
+	Mysql 5.5
+
+Using:
+	bundle install
+	bundle update
+	rake db:create:all
+	rake db:migrate
+	bundle exec puma
