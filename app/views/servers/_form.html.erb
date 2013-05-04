@@ -42,7 +42,7 @@
       <div class="control-group">
           <div class="controls">          
               <%= submit_tag "Save", :class => "btn" %>
-              <button class="btn" type="button" onclick="history.go(-1)">Cancel</button>
+              <%= link_to "Cancel", servers_path, :class => "btn"  %>
           </div>
       </div>
   </fieldset>

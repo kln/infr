@@ -5,7 +5,7 @@
   		<p id="notice"><%= notice %></p>
 	</div>
 <% end %>
-<br /><legend>Servers</legend>
+<br /><legend>SERVERS</legend>
 <table class="table table-striped">
 	<tr>
 		<td>Hostname:</td>
@@ -24,4 +24,4 @@
 		<td><textarea rows="4"><%=  @server.description %></textarea></td>
 	</tr>
 </table>
-<button class="btn" ><%= link_to image_tag("back.png", :alt => "Back"), servers_path %></button>
+<%= link_to image_tag("back.png", :alt => "Back"), servers_path, :class => "btn" %>
