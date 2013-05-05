@@ -24,12 +24,14 @@ respond_to :html, :json
 
   def create
     @server = current_user.server.build(params[:server])
-    if @server.save
-        format.html { redirect_to @server, notice: "Server was successfully registered." }
-        format.json { render json: @server, status: :created, location: @server }
-    else
-        format.html { render action: "new" }
-        format.json { render json: @server.errors, status: :unprocessable_entity }
+    respond_to do |format|
+      if @server.save
+          format.html { redirect_to @server, notice: "Server was successfully registered." }
+          format.json { render json: @server, status: :created, location: @server }
+      else
+          format.html { render action: "new" }
+          format.json { render json: @server.errors, status: :unprocessable_entity }
+      end
     end
   end
 
