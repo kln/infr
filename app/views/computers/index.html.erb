@@ -1,27 +1,33 @@
 <br /><legend>COMPUTERS</legend>
-<table class="table table-striped">
-  <thead style="td">
+<% if @computer.any? %>
+  <table class="table table-striped">
+    <thead style="td">
+      <tr>
+        <td>Hostname</td>
+        <td>IP</td>
+        <td>Operational System</td>
+        <td></td><td></td><td></td>
+      </tr>
+    </thead>
+    <% @computer.each do |computer| %>
     <tr>
-      <td>Hostname</td>
-      <td>IP</td>
-      <td>Operational System</td>
-      <td></td><td></td><td></td>
-    </tr>
-  </thead>
-  <% @computer.each do |computer| %>
-  <tr>
-    <td><%= computer.hostname %></td>
-    <td><%= computer.ip %></td>
-    <td><%= computer.os %></td>
+      <td><%= computer.hostname %></td>
+      <td><%= computer.ip %></td>
+      <td><%= computer.os %></td>
 
-    <td style="width: 30pt;"><%= link_to "Details", computer %></td>
-    <td style="width: 20pt;">
-      <%= link_to image_tag("edit.png", :alt => "Edit"), edit_computer_path(computer) %>
-    </td>
-    <td style="width: 20pt;">
-      <%= link_to image_tag("remove.png", :alt => "Delete"),computer, :method => :delete, :data => { :confirm => "Are you sure ?" } %>
-    </td>
-  </tr>
-  <% end %>
-</table>
+      <td style="width: 30pt;"><%= link_to "Details", computer %></td>
+      <td style="width: 20pt;">
+        <%= link_to image_tag("edit.png", :alt => "Edit"), edit_computer_path(computer) %>
+      </td>
+      <td style="width: 20pt;">
+        <%= link_to image_tag("remove.png", :alt => "Delete"),computer, :method => :delete, :data => { :confirm => "Are you sure ?" } %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+<% else %>
+  <div class="well">
+    You don't have Computers registered.
+  </div>
+<% end %>
 <%= button_to "New", new_computer_path, :method => :get, :class => "btn" %>
