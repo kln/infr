@@ -30,4 +30,6 @@
     You don't have Servers registered.
   </div>
 <% end %>
+<%= paginate @servers %>
 <%= button_to "New", new_server_path, :method => :get, :class => "btn" %>
+<%= page_entries_info @servers %>

@@ -4,6 +4,7 @@ respond_to :html, :json
 
   def index
     @server = Server.find_all_by_user_id(current_user)
+    @servers = Server.order("hostname").page(params[:page])
     respond_with @server
   end
 
