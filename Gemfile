@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem "rails"
-
+gem "kaminari"
 gem "mysql2"
 gem "devise", '2.1.2'
 gem "jquery-rails"

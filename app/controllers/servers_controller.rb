@@ -3,8 +3,7 @@ before_filter :authenticate_user!
 respond_to :html, :json
 
   def index
-    @server = Server.find_all_by_user_id(current_user)
-    @servers = Server.order("hostname").page(params[:page])
+    @server = Server.where(:user_id => current_user).order("hostname").page(params[:page])
     respond_with @server
   end
 

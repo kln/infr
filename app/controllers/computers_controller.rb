@@ -3,7 +3,7 @@ before_filter :authenticate_user!
 respond_to :html, :json
 
   def index
-    @computer = Computer.find_all_by_user_id(current_user)
+    @computer = Computer.where(:user_id => current_user).order("hostname").page(params[:page])
     respond_with @computer
   end
 

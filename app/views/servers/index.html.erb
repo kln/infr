@@ -25,11 +25,11 @@
       </tr>
     <% end %>
   </table>  
+<%= paginate @server %>
+<%= page_entries_info @server %>
 <% else %>
   <div class="well">
     You don't have Servers registered.
   </div>
 <% end %>
-<%= paginate @servers %>
 <%= button_to "New", new_server_path, :method => :get, :class => "btn" %>
-<%= page_entries_info @servers %>

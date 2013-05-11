@@ -3,7 +3,7 @@ before_filter :authenticate_user!
 respond_to :html, :json
 
   def index
-    @equip= Equip.find_all_by_user_id(current_user)
+    @equip = Equip.where(:user_id => current_user).order("model_equip").page(params[:page])
     respond_with @equip
   end
 

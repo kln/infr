@@ -25,6 +25,8 @@
     </tr>
     <% end %>
   </table>
+  <%= paginate @equip %>
+  <%= page_entries_info @equip %>
 <% else %>
   <div class="well">
     You don't have Equips registered.

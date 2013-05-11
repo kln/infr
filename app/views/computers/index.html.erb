@@ -25,6 +25,8 @@
     </tr>
     <% end %>
   </table>
+  <%= paginate @computer %>
+  <%= page_entries_info @computer %>
 <% else %>
   <div class="well">
     You don't have Computers registered.
