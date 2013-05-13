@@ -25,8 +25,16 @@
       </tr>
     <% end %>
   </table>  
-<%= paginate @server %>
-<%= page_entries_info @server %>
+  <table class="table-paginate">
+    <tr>
+      <td align="left">
+        <%= paginate @server %>
+      </td>
+      <td align="right">
+        <%= page_entries_info @server %>
+      </td>
+    </tr>  
+  </table>
 <% else %>
   <div class="well">
     You don't have Servers registered.
