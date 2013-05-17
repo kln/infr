@@ -228,6 +228,11 @@ a:hover {
   width: 940px;
   color: #000;
 }
+[class*="span"].centred {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
 
 .span12 {
   width: 940px;

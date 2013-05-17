@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Infr. | :D</title>
+	<title>stuffbox du.ub</title>
 	<%= javascript_include_tag "application" %>
 	<%= stylesheet_link_tag "bootstrap.css", :media => "all" %>
 	<%= javascript_include_tag "bootstrap.js" %>
@@ -13,7 +13,7 @@
 			<div class="container">
 				<ul class="nav">
 						<li>
-							<%= image_tag("logo.png", :size => "55x55", :class => "brand") %>
+							<%= image_tag("logo.png", :class => "brand") %>
 						</li>
 					<% if user_signed_in? %>
 						<li><a href="<%= servers_path %>" >Servers</a></li>
@@ -27,8 +27,10 @@
 				</ul>
 			</div>
 		</div>
-		<div class="container">
-			<%= yield %>
+		<div class="row">
+		    <div class="span9 centred">
+				<%= yield %>
+		    </div>
 		</div>
 	</div>
 </body>
