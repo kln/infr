@@ -17,10 +17,10 @@
 
         <td style="width: 30pt;"><%= link_to "Details", server %></td>
         <td style="width: 20pt;">
-          <%= link_to image_tag("edit.png", :alt => "Edit"), edit_server_path(server) %>
+          <%= link_to image_tag("edit.png", :title => "Edit"), edit_server_path(server) %>
         </td>
         <td style="width: 20pt;">
-          <%= link_to image_tag("remove.png", :alt => "Delete"),server, :method => :delete, :data => { :confirm => "Are you sure ?"} %>
+          <%= link_to image_tag("remove.png", :title => "Delete"),server, :method => :delete, :data => { :confirm => "Are you sure ?"} %>
         </td>
       </tr>
     <% end %>

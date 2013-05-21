@@ -17,10 +17,10 @@
       <td><%= equip.location_equip %></td>
       <td style="width: 30pt;"><%= link_to "Details", equip %></td>
       <td style="width: 20pt;">
-        <%= link_to image_tag("edit.png", :alt => "Edit"), edit_equip_path(equip) %>
+        <%= link_to image_tag("edit.png", :title => "Edit"), edit_equip_path(equip) %>
       </td>
       <td style="width: 20pt;">
-        <%= link_to image_tag("remove.png", :alt => "Delete"),equip, :method => :delete, :data => { :confirm => "Are you sure?" } %>
+        <%= link_to image_tag("remove.png", :title => "Delete"),equip, :method => :delete, :data => { :confirm => "Are you sure?" } %>
       </td>
     </tr>
     <% end %>
