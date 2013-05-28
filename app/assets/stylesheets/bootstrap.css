@@ -2031,7 +2031,7 @@ table {
 
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
-  background-color: #B1DFF5;
+  background-color: #F8F8F8;
   font-weight: 200;
 }
 
@@ -4599,7 +4599,7 @@ input[type="submit"].btn.btn-mini {
 }
 
 .navbar-inverse {
-  color: #999999;
+  color: #000;
 }
 
 .navbar-inverse .navbar-inner {
@@ -5037,6 +5037,7 @@ input[type="submit"].btn.btn-mini {
 
 .modal-body {
   overflow: auto;
+  text-align: center;
 }
 
 .modal-form {

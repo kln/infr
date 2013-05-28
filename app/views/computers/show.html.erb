@@ -31,8 +31,29 @@
 		<td><%= @computer.hard_disk %></td>
 	</tr>
 	<tr>
+      <td align="left">
+        Show QR Code
+      </td>
+      <td align="right">
+		<%= link_to image_tag("qrcode.png", :title => "Show QR Code"), "#myModal", :data => {:toggle=>"modal"} %>
+      </td>
+    </tr>
+	<tr>
 		<td>Observations: </td>
 		<td><%= @computer.obs %></td>
 	</tr>
 </table>
 <%= link_to image_tag("back.png", :alt => "Back"), computers_path, :class => "btn"  %>
+
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>QrCode for <%= @computer.hostname %></h3>
+  </div>
+  <div class="modal-body">
+ 		<%= render 'qrcode', :object => :computer %>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+  </div>
+</div>​
