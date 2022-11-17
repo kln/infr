@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem "rails"
 gem "kaminari"
 gem "mysql2"
-gem "devise", '2.1.2'
+gem "devise", '3.5.10'
 gem "jquery-rails"
 gem "json"
 gem "puma"
